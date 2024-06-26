@@ -1,0 +1,107 @@
+ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: rgb(139, 142, 153);
+    font-family: "Poppins";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+ul li a:hover {
+    color: white;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    text-decoration-thickness: 2px;
+    text-decoration-color: rgb(56, 88, 214);
+    text-underline-position: under;
+    text-decoration-style: solid;
+    transform: scale(1.2);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+
+
+li {
+    color: rgb(139, 142, 153);
+    font-family: "Poppins";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+header {
+    position: sticky;
+    background: linear-gradient(152.04deg, rgb(56, 54, 56) 1.732%,rgb(11, 11, 11) 27.783%);;
+    top: 0;
+    z-index: 11;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    padding:10px 0;
+    animation: slideDown 0.5s ease-in-out;
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    svg {
+        color: white;
+        font-size: 20px;
+    }
+}
+
+.search_form input {
+    width: 300px;
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px solid rgb(139, 142, 153);
+}
+
+.search_form input:focus {
+    outline: none;
+}
+
+.search_form button {
+    background-color: rgb(139, 142, 153);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 9px;
+    background: rgb(56, 88, 214);
+    margin-left: -79px;
+    border: none;
+}
+
+.search_form button:hover {
+    cursor: pointer;
+    background-color: rgb(39, 59, 138);
+}
+
+.search_form button:active {
+    opacity: 0.6;
+}
+.flex_elemnt{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

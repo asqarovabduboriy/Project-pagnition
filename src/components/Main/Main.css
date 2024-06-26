@@ -1,0 +1,57 @@
+.card {
+    border-radius: 22px;
+    background: rgb(246, 246, 246);
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    gap: 26px;
+}
+
+.card:hover {
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+
+    img {
+        transform: scale(1.1);
+        transition: all 0.3s ease-in-out;
+        
+    }
+
+}
+
+.card .img img {
+    width: 100%;
+    object-fit: contain;
+}
+
+
+.title h3 {
+    color: rgb(30, 29, 29);
+    font-family: "Inter";
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 44px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.title p {
+    color: rgb(139, 142, 153);
+    font-family: "Inter";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0%;
+    text-align: left;
+    width: 173px;
+    margin-top: 9px;
+}
+
+.wrapper_watch {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    margin-top: 73px;
+}

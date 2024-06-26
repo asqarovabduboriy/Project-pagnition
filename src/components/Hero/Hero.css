@@ -1,0 +1,66 @@
+.text_wrapper h2 {
+    color: rgb(255, 255, 255);
+    font-family: 'Poppins';
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 125.5%;
+    letter-spacing: 0%;
+    text-align: left;
+    width: 457px;
+}
+
+.hero {
+    background: linear-gradient(152.04deg, rgb(56, 54, 56) 1.732%, rgb(11, 11, 11) 27.783%);
+    padding: 154px 0px 204px;
+}
+
+.text_wrapper p {
+    color: rgb(139, 142, 153);
+    font-family: "Poppins";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 125.5%;
+    letter-spacing: 0%;
+    text-align: left;
+    width: 456px;
+    margin: 45px 0;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    gap: 184px;
+}
+
+.image_wrapper img {
+    object-fit: contain;
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+
+}
+
+.text_wrapper {
+    animation: left 1s ease-in-out;
+}
+
+@keyframes left {
+    0% {
+        transform: translateX(-100%);
+        transform: scale(0.5);
+    }
+
+    100% {
+        transform: translateX(0);
+        transform: scale(1);
+    }
+}
