@@ -4,3 +4,48 @@
     align-items: center;
     gap: 20px;
 }
+
+.sidebar{
+    width: 300px;
+    height: 100vh;
+    background-color: #585858;
+    position: sticky;
+    top: 0;
+    left: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 30px;
+    z-index: 1;
+
+}
+
+.list_sidebar{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.list_sidebar li{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 20px;
+    svg{
+        color: #fff;
+    }
+}
+
+.list_sidebar li:hover{
+    color: #fff;
+    background-color: #ccc;
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.1);
+    border-radius: 10px;
+
+    svg{
+        color: #fff;
+    }
+}

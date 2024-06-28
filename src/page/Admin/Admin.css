@@ -1,0 +1,10 @@
+.Admin{
+    display: grid;
+    grid-template-columns: 300px 1fr;
+}
+
+.form_login{
+overflow-y: scroll;
+overflow-x: hidden;
+
+}

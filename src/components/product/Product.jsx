@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Product.css";
-import { useGetProductsQuery } from "../../context/api/productsApi";
+import { useGetProductsQuery } from "../../context/api/productApi";
 import img from "../../assets/imgs/saot2.svg";
 import { FaHeart, FaShoppingCart, FaStar } from "react-icons/fa";
 import Pagination from "@mui/material/Pagination";

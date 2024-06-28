@@ -2,7 +2,6 @@ import { api } from './index'
 
 export const productApi = api.injectEndpoints({
   endpoints: (build) => ({
-    // Get request
     getProducts: build.query({
       query: (params) => ({ 
         url: '/products/search', 
@@ -10,29 +9,32 @@ export const productApi = api.injectEndpoints({
       }),
       providesTags:["Product"]
     }),
-    // Post request
+    getProductById: build.query({
+      query: (id) => ({ 
+        url: `/products/${id}`
+      }),
+      providesTags:["Product"]
+    }),
     createProduct: build.mutation({
       query: (body)=> ({
-        url: "/products/create",
+        url:"/products/create",
         method: "POST",
         body
       }),
       invalidatesTags: ["Product"]
     }),
-    // Patch request
-    updateProduct: build.mutation({
-      query: ({_id, body})=> ({
-        url: `/`,
-        method: "PATCH",
-        body
+    deleteProduct: build.mutation({
+      query: (id)=> ({
+        url:`/products/${id}`,
+        method: "DELETE"
       }),
       invalidatesTags: ["Product"]
     }),
-    // Delete request
-    deleteProduct: build.mutation({
-      query: (id)=> ({
-        url:`/`,
-        method: "DELETE"
+    updateProduct: build.mutation({
+      query: ({id, body})=> ({
+        url:`/products/${id}`,
+        method: "PUT", // or "PATCH"
+        body
       }),
       invalidatesTags: ["Product"]
     })
@@ -41,7 +43,7 @@ export const productApi = api.injectEndpoints({
 
 export const {
   useGetProductsQuery,
-  useDeleteProductMutation,
   useCreateProductMutation,
+  useDeleteProductMutation,
   useUpdateProductMutation
 } = productApi

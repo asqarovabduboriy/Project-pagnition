@@ -1,12 +1,12 @@
 import React from "react";
 import "./Login.css";
 import { useGetvaleinput } from "../../hook/useGetInputvalue";
-import { useUserIsLoginMutation } from "../../context/api/user";
+import { useSignInMutation } from "../../context/api/userApi";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { setToken, setUser } from "../../context/slice/authSlice";
+import { setToken, setUser } from "../../context/slices/authSlice";
 
 const insatalstate = {
   UserName: "",
@@ -16,7 +16,7 @@ const insatalstate = {
 const Login = () => {
   const navigate = useNavigate();
   const { formdata, handleChange, setformdata } = useGetvaleinput(insatalstate);
-  const [login, { isLoading, isSuccess, data }] = useUserIsLoginMutation();
+  const [login, { isLoading, isSuccess, data }] = useSignInMutation();
 
   const dispatch = useDispatch();
 
@@ -30,6 +30,7 @@ const Login = () => {
     if (isSuccess) {
       dispatch(setToken(data?.data?.token));
       dispatch(setUser(data?.data?.user));
+      console.log(data?.data?.user);
       navigate("/admin");
       toast.success("login success");
       setformdata(insatalstate);
