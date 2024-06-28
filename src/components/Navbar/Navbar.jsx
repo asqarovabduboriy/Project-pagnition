@@ -35,7 +35,7 @@ const Navbar = () => {
           </form>
 
           <div className="icons">
-           <FaUser/>
+          <NavLink to="/login"><FaUser/></NavLink>
            <CiHeart/>
            <FaShoppingCart/>
           </div>
